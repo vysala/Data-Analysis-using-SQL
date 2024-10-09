@@ -61,9 +61,12 @@ from sales
 where weekday(SaleDate) = 4;
 
 --Queries to work with People table 
-
+-- Retrieve all records from people table
 select * from people;
 
+
+
+-- Retrieve all records from people table where team is 'Delish' or 'Juices'
 -- OR operator in SQL
 
 select * from people
@@ -74,11 +77,12 @@ where team = 'Delish' or team = 'Jucies';
 select * from people
 where team in ('Delish','Jucies');
 
--- LIKE operator in SQL
+-- LIKE operator in SQL   , Retrieve records from people table if the salesperson name starts with B. 'salesperson' column in people table has name.
 
 select * from people
 where salesperson like 'B%';
 
+-- Retrieve records from people table if the salesperson name has B. 
 select * from people
 where salesperson like '%B%';
 
@@ -88,11 +92,12 @@ select * from sales;
 
 select 	SaleDate, Amount,
 		case 	when amount < 1000 then 'Under 1k'
-				when amount < 5000 then 'Under 5k'
-                when amount < 10000 then 'Under 10k'
+			when amount < 5000 then 'Under 5k'
+                        when amount < 10000 then 'Under 10k'
 			else '10k or more'
 		end as 'Amount category'
 from sales;
 
+-- Find the number of people in each team 
 select team, count(*) from people
 group by team;
