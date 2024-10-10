@@ -37,10 +37,10 @@ order by PID, Amount desc;
 Select * from sales
 where amount > 10000 and SaleDate >= '2022-01-01';
 
--- Find out the sales data for the year 2022 if the sales amount is greater than 10000. Use year() function to retrieve data in a specific year
+-- Find out the sales data for the year 2021 if the sales amount is greater than 10000. Use year() function to retrieve data in a specific year
 
 select SaleDate, Amount from sales
-where amount > 10000 and year(SaleDate) = 2022
+where amount > 10000 and year(SaleDate) = 2021
 order by amount desc;
 
 -- BETWEEN operator in SQL with < & > operators
@@ -78,7 +78,7 @@ where team = 'Delish' or team = 'Jucies';
 select * from people
 where team in ('Delish','Jucies');
 
--- LIKE operator in SQL   , Retrieve records from people table if the salesperson name starts with B. 'salesperson' column in people table has name.
+-- LIKE operator in SQL   , Retrieve records from people table if the salesperson name starts with B. 'salesperson' column in people table stores name.
 
 select * from people
 where salesperson like 'B%';
