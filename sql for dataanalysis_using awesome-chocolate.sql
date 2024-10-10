@@ -61,6 +61,12 @@ select SaleDate, Amount, Boxes, weekday(SaleDate) as 'Day of week'
 from sales
 where weekday(SaleDate) = 4;
 
+-- subquery 
+-- Retrieve those products whose sales amount exceeded 10000 in the sales year 2021
+       
+ select pid, product from products where pid in (Select pid from sales where amount > 10000 and year(SaleDate) = 2021) ; 
+    
+
 --Queries to work with People table 
 -- Retrieve all records from people table
 select * from people;
