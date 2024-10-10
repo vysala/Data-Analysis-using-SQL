@@ -25,6 +25,7 @@ select * from sales
 where amount > 10000
 order by amount desc;
 
+-- Filtering and then Sorting by multiple criteria (first by Product ID, then by Amount)
 -- Retrieve sales data where GEOID is g1 and order by product ID &  order of amounts desc
 
 select * from sales
