@@ -127,7 +127,7 @@ SELECT s.SaleDate, s.Amount, p.Product, e.Salesperson, e.Team
 	JOIN People e ON s.SPID = s.SPID
 	JOIN Products p ON p.PID = s.PID;    
     
--- Filtering multiple jointed table for retrieving Delish team's sales where amount is less than 1000
+-- Filtering multiple joined table for retrieving Delish team's sales where amount is less than 1000
 SELECT Sales.SaleDate, Sales.Amount, Products.Product, People.Salesperson, People.Team
 	FROM Sales
 	JOIN People ON People.SPID = Sales.SPID
